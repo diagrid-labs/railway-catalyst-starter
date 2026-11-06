@@ -11,7 +11,7 @@ Workflow Steps:
 4. Update inventory after successful payment
 5. Notify user of completion
 
-For more information, visit: https://docs.diagrid.io/catalyst/quickstart/workflow
+For more information, visit: https://docs.diagrid.io/getting-started/quickstarts/workflow/
 """
 
 from fastapi import FastAPI, HTTPException

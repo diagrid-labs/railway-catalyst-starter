@@ -11,9 +11,9 @@
 
 Dapr can be used from any major language and framework: **Java, .NET, Go, Python, JavaScript/TypeScript, Rust, PHP, C++**, and more. It enables developers to focus on business logic while Dapr handles retries, security, observability, and portability.
 
-### What is Diagrid Catalyst?
-![Catalyst Overview](https://docs.diagrid.io/assets/images/catalyst-hero-graphic-bc80407e257eb81988efbb00c56fe783.png)
-[Catalyst](https://www.diagrid.io/catalyst) is **Dapr as a managed service**. Instead of running Dapr sidecars or managing infrastructure, you connect your applications to Catalyst's hosted Dapr endpoints. Catalyst is serverless and multi-cloud portable: your app can run anywhere (such as Railway) and use Dapr APIs for workflows, pub/sub, state, and reliable service invocation.
+### What is Diagrid?
+![Diagrid Overview](https://docs.diagrid.io/assets/images/catalyst-hero-graphic-bc80407e257eb81988efbb00c56fe783.png)
+[Diagrid](https://www.diagrid.io/catalyst) is **Dapr as a managed service**. Instead of running Dapr sidecars or managing infrastructure, you connect your applications to Diagrid's hosted Dapr endpoints. Diagrid is serverless and multi-cloud portable: your app can run anywhere (such as Railway) and use Dapr APIs for workflows, pub/sub, state, and reliable service invocation.
 
 
 ### Common Use Cases
@@ -27,7 +27,7 @@ Dapr can be used from any major language and framework: **Java, .NET, Go, Python
 
 * Bindings & Triggers: Integrate with external systems and APIs, handle inbound events, authenticate calls, and observe third-party interactions.
 
-_Note_: This starter template only demonstrates how to use Durable Workflows in Python. Other Catalyst and Dapr APIs (pub/sub, state, service invocation, bindings) can also be used but are not included in this starter.
+_Note_: This starter template only demonstrates how to use Durable Workflows in Python. Other Diagrid and Dapr APIs (pub/sub, state, service invocation, bindings) can also be used but are not included in this starter.
 
 
 ## Why Deploy railway-catalyst-starter on Railway?
@@ -38,31 +38,31 @@ By deploying railway-catalyst-starter on Railway, you are one step closer to sup
 
 ### About Hosting Dapr-enabled Apps on Railway
 
-By hosting your applications on Railway and connecting them through Catalyst, you unlock the strengths of both platforms: Railway provides automated build, deployment, and scaling, while Catalyst (Dapr APIs) connects your apps with workflows, pub/sub, state, and service invocation, without the burden of running Dapr yourself. This combination lets you build reliable and scalable distributed systems even in unreliable cloud environments.
+By hosting your applications on Railway and connecting them through Diagrid, you unlock the strengths of both platforms: Railway provides automated build, deployment, and scaling, while Diagrid (Dapr APIs) connects your apps with workflows, pub/sub, state, and service invocation, without the burden of running Dapr yourself. This combination lets you build reliable and scalable distributed systems even in unreliable cloud environments.
 
-This means you can connect your Railway-hosted apps to Catalyst APIs for workflows, messaging, state, and service-to-service calls. Railway hosts your app, Catalyst provides the Dapr APIs, and together they deliver a reliable platform for distributed applications.
+This means you can connect your Railway-hosted apps to Diagrid APIs for workflows, messaging, state, and service-to-service calls. Railway hosts your app, Diagrid provides the Dapr APIs, and together they deliver a reliable platform for distributed applications.
 
 ### Deployment Dependencies
-To connect your Railway app to Catalyst, you need to create a **project** in [Diagrid Catalyst](https://catalyst.diagrid.io) (with **Workflow enabled**) and an **App ID**. These will provide the values for the required environment variables:
+To connect your Railway app to Diagrid, you need to create a **project** in [Diagrid](https://catalyst.diagrid.io) (with **Workflow enabled**) and an **App ID**. These will provide the values for the required environment variables:
 
-- `DAPR_HTTP_ENDPOINT` – Catalyst HTTP endpoint URL
-- `DAPR_GRPC_ENDPOINT` – Catalyst gRPC endpoint URL
+- `DAPR_HTTP_ENDPOINT` – Diagrid HTTP endpoint URL
+- `DAPR_GRPC_ENDPOINT` – Diagrid gRPC endpoint URL
 - `DAPR_API_TOKEN` – API token for your App ID
 
-Once set in Railway, your application will be able to call Catalyst APIs securely over HTTP or gRPC.
+Once set in Railway, your application will be able to call Diagrid APIs securely over HTTP or gRPC.
 
 ### Dependencies for Dapr
 
 All that is needed for your application to use Dapr is the
 [Dapr SDK](https://docs.dapr.io/developing-applications/sdks/) in your desired
 language and framework. The SDKs provide idiomatic APIs for workflows, pub/sub, state management, service
-invocation, and bindings, making it simple to integrate Catalyst into your Railway app.
+invocation, and bindings, making it simple to integrate Diagrid into your Railway app.
 
 
 ### Implementation Details
-This starter deploys a **Python-based workflow app** that demonstrates how to use Dapr Workflows with Catalyst. The sample implements a simple order processing workflow with activities such as notifying the user, reserving inventory, processing payment, and updating inventory.
+This starter deploys a **Python-based workflow app** that demonstrates how to use Dapr Workflows with Diagrid. The sample implements a simple order processing workflow with activities such as notifying the user, reserving inventory, processing payment, and updating inventory.
 
-Catalyst provides the **workflow engine storage**, so even if the Railway app is restarted, redeployed, or scaled down, the workflow state is preserved and resumes where it left off.
+Diagrid provides the **workflow engine storage**, so even if the Railway app is restarted, redeployed, or scaled down, the workflow state is preserved and resumes where it left off.
 
 ### Usage
 

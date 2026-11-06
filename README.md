@@ -1,4 +1,4 @@
-# Railway Catalyst Starter
+# Railway Diagrid Starter
 
 This is a Railway template app that demonstrates a Dapr Workflow implementation for order processing.
 
@@ -7,15 +7,15 @@ This is a Railway template app that demonstrates a Dapr Workflow implementation 
 [![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/railway-catalyst-starter)
 
 
-#### 1. Set Up Diagrid Catalyst
+#### 1. Set Up Diagrid
 
-First, sign up authenticate with [Diagrid Catalyst](https://docs.diagrid.io/catalyst/):
+First, sign up authenticate with [Diagrid](https://docs.diagrid.io/concepts/what-is-diagrid/):
 
 ```bash
 diagrid login
 ```
 
-Create a new Catalyst project and app ID:
+Create a new Diagrid project and app ID:
 
 ```bash
 # Create a new project (if it doesn't exist)
@@ -27,7 +27,7 @@ diagrid appid create order-workflow
 
 #### 2. Set Required Environment Variables
 
-Get your Diagrid Catalyst endpoints and API token:
+Get your Diagrid endpoints and API token:
 
 ```bash
 # Get your Diagrid Catalyst endpoints
